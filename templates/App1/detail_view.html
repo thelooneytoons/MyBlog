@@ -1,0 +1,16 @@
+{% extends "App1/HomePage.html"%}
+{% block content %}
+	
+	{{task.title}}<br>
+	{{task.date}}<br>
+	{{task.content}}
+	<br>
+		<a href="{% url 'edit' pk=task.id %}">
+			<label><button>Edit</button></label>
+		</a>
+		<a href="{% url 'delete' pk=task.id %}">
+			<label><button>Delete</button></label>
+		</a>
+	
+
+{% endblock %}

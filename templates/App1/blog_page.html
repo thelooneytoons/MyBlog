@@ -1,0 +1,64 @@
+{% extends "App1/base.html"%}
+<!-- {% load static %} -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="blog_page.css">
+	<link rel="stylesheet" type="text/css" href="..\..\static\blog_page.css">
+	<title>blog-page</title>
+</head>
+<body>
+	 -->
+
+	{% block content %}
+
+				
+			<div class="blogs">
+
+	<div class="blog-units">
+					<div class="justify">
+						<div class="blog-units-head profile"><img src="https://www.blogenium.com/wp-content/uploads/2020/01/baby-yoda-hd-wallapers-blogenium8-1024x576.jpg"></div>
+						<div class="blog-units-head details"><em>Author: Divakar</em> <br>
+						<span class="date"> Date: 2/march/2000 </span></div>
+					</div>
+					<hr>
+					<div class="blog-units-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident,in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+
+	{% for li in list %}
+				<div class="blog-units">
+					<div class="justify">
+						<div class="blog-units-head profile"><img src="https://www.blogenium.com/wp-content/uploads/2020/01/baby-yoda-hd-wallapers-blogenium8-1024x576.jpg"></div>
+						<div class="blog-units-head details"><em>Author: Divakar Vikram Singh </em> <br>
+						<span class="date"> {{li.date}} </span></div>
+					</div>
+					<hr>
+					<div class="blog-units-body">
+						<a href="{% url 'detail-view' pk=li.id %}"> {{li.title}} </a>
+						<br>
+						<p>
+							{{li.content}}
+						</p>	
+					</div>
+				</div>
+
+
+
+	{% endfor %}
+
+	{% endblock %}
+				
+
+
+				<!-- </div> -->
+
+
+			
+<!-- </body>
+</html> -->

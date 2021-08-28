@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog_page.css' %}">
+	<title>base page</title>
+	<style type="text/css">
+		
+		
+
+	</style>
+</head>
+<body>
+<div class="nav-bar">
+	<nav class="flex-box">
+		<div class="logo"> looney's Blog </div>
+		<ul class="ul">
+			<li><a href="">Profile</a></li>
+			<li><a href="">Login</a></li>
+			<li><a href="">Logout</a></li>
+			<li><a href="">My Blogs</a></li>
+		</ul>
+	</nav>
+</div>
+
+		<div class="block">
+		<div class="grid">
+			<div class="left-side">left side bar
+				<br>
+				<br>
+				<hr>
+				<br>
+				<br>
+				<form action="{% url 'App1-Functional' %}"  method= 'POST'>
+					{% csrf_token%}
+					{{ forms.as_p }}
+					<input type="submit" name="ADD" placeholder="ADD">
+				</form>
+
+			</div>
+		{% block content %}
+		{% endblock %}
+	
+</div>
+			<div class="righ-side">
+				<div class="right-bar">
+					<div class="rb-content">
+						<span id="heading">Announcements<hr></span><br>
+						<ul>
+							<li>whats new</li>
+							<li>Friends </li>
+							<li>Following</li>
+							<li>your posts</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

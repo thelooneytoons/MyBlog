@@ -1,0 +1,8 @@
+{% extends "App1/HomePage.html"%}
+{% block content %}
+
+	<form>
+		{% csrf_token %}
+		{{register_form.as_p}}
+	</form>
+	{% endblock %}

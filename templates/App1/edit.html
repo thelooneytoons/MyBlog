@@ -1,0 +1,14 @@
+{% extends "App1/HomePage.html"%}
+{% block content %}
+	
+	
+	<br>
+	<form action="{% url 'save' pk=post.id%}" method="POST" >
+		{% csrf_token %}
+		{{form}}
+		<!-- <a href="{% url 'save' pk=post.id %}"> -->
+			<label><input type="Submit" name="Save"></label>
+		<!-- </a> -->
+	</form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "App1/HomePage.html"%}
+{% block content %}
+
+	<div >
+		<a href="{% url 'detail-view' pk=li.id %}"> {{li.title}} </a>
+		{{li.title}}
+		{{li.content}}
+		{{li.date}}
+		<br>
+	</div>	
+	{% endfor %}
+	{% endblock %}
+
+
